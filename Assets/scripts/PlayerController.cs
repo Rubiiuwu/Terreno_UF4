@@ -106,4 +106,12 @@ public class PlayerController : MonoBehaviour
         _controller.Move(_playerGravity * Time.deltaTime);
 
     }
+
+    void OnTriggerEnter(Collider collider)
+    {
+        if(collider.gameObject.layer == 7);
+        {
+            _animator.SetTrigger("rip");
+        }
+    }
 }
