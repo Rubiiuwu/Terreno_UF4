@@ -321,7 +321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182691650}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.045533385, y: -0.000000017188533, z: 7.8346485e-10, w: 0.9989628}
+  m_LocalRotation: {x: 0.045533385, y: 0.000000017188533, z: -7.8346485e-10, w: 0.9989628}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -649,6 +649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -733,6 +734,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf71d2d42999824084043b8a968a203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationScale: 10
 --- !u!1 &705923980
 GameObject:
   m_ObjectHideFlags: 3
@@ -2024,7 +2038,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2139127818}
   - component: {fileID: 2139127817}
-  - component: {fileID: 2139127816}
   m_Layer: 0
   m_Name: MiniMAp
   m_TagString: Untagged
@@ -2032,14 +2045,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &2139127816
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139127815}
-  m_Enabled: 1
 --- !u!20 &2139127817
 Camera:
   m_ObjectHideFlags: 0
