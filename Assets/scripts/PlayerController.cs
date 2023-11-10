@@ -22,12 +22,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _sensorRadius = 0.2f;
     [SerializeField] private LayerMask _groundLayer; 
     private bool _isGrounded;
+    public bool canMove;
 
     void Awake()
     {
         _controller = GetComponent<CharacterController>();
         _animator = GetComponentInChildren<Animator>();
         _camera = Camera.main.transform;
+        canMove = true;
     }
 
     // Update is called once per frame
@@ -40,12 +42,16 @@ public class PlayerController : MonoBehaviour
         {
             AiMovement();
         }
-        else
+        /*else
         {
             Movement();
-        }
+        }*/
 
-        Jump();
+        if (canMove)
+        {
+            Jump();
+            Movement();
+        }
     }
 
     void Movement()
@@ -65,6 +71,7 @@ public class PlayerController : MonoBehaviour
         Vector3 moveDirection = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
 
         _controller.Move(moveDirection.normalized * playerSpeed * Time.deltaTime);
+
         }
     }
 
@@ -112,6 +119,7 @@ public class PlayerController : MonoBehaviour
         if(collider.gameObject.layer == 7);
         {
             _animator.SetTrigger("Rip");
+            canMove = false;
         }
     }
 }
