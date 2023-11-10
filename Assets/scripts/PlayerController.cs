@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collider.gameObject.layer == 7);
         {
-            _animator.SetTrigger("rip");
+            _animator.SetTrigger("Rip");
         }
     }
 }
